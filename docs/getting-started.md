@@ -315,11 +315,10 @@ That's it! Your entire application now runs on a different platform.
 
 Now that you have a basic application running, explore these topics:
 
-- [Controllers](./controllers.md) - Learn about advanced routing and parameter decorators
-- [Services & Dependency Injection](./services.md) - Create reusable business logic
-- [Validation with Pipes](./validation.md) - Validate requests with Zod
-- [Guards](./guards.md) - Implement authentication and authorization
-- [Exception Handling](./exceptions.md) - Handle errors gracefully
+- [Controllers](/controllers) - Learn about advanced routing and parameter decorators
+- [Services & Dependency Injection](/services) - Create reusable business logic
+- [Validation with Pipes](/pipes) - Validate requests with Zod
+- [Exception Handling](/exception-handling) - Handle errors gracefully
 
 ---
 

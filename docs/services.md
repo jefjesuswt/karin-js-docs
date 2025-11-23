@@ -579,9 +579,8 @@ describe("UsersService", () => {
 
 ## Next Steps
 
-- [Validation with Pipes](https://claude.ai/chat/validation.md) - Validate service inputs
-- [Guards](https://claude.ai/chat/guards.md) - Protect service methods
-- [Exception Handling](https://claude.ai/chat/exceptions.md) - Handle service errors
+- [Validation with Pipes](/pipes) - Validate service inputs
+- [Exception Handling](/exception-handling) - Handle service errors
 
 ---
 

@@ -1,0 +1,10 @@
+[build]
+  # Comando para construir la documentación
+  command = "bun run docs:build"
+  # Carpeta donde VitePress genera los archivos estáticos
+  publish = "docs/.vitepress/dist"
+
+[build.environment]
+  # Asegura que Netlify use Bun (si lo soporta nativamente o via plugin)
+  # Si no, suele funcionar bien instalando bun en el pre-build o usando npm
+  BUN_VERSION = "1.2.0"

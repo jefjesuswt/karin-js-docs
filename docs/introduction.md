@@ -172,4 +172,4 @@ _Benchmark: 100k requests, 100 concurrency, AMD Ryzen 5 5600X_
 
 ## Next Steps
 
-Ready to build your first KarinJS application? Head over to the [Getting Started](https://claude.ai/chat/getting-started.md) guide!
+Ready to build your first KarinJS application? Head over to the [Getting Started](/getting-started) guide!

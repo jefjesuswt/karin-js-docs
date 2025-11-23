@@ -471,10 +471,9 @@ export class PostsController {
 
 ## Next Steps
 
-- [Services & Dependency Injection](https://claude.ai/chat/services.md) - Extract business logic
-- [Validation with Pipes](https://claude.ai/chat/validation.md) - Validate incoming data
-- [Guards](https://claude.ai/chat/guards.md) - Protect routes
-- [Exception Handling](https://claude.ai/chat/exceptions.md) - Handle errors
+- [Services & Dependency Injection](/services) - Extract business logic
+- [Validation with Pipes](/pipes) - Validate incoming data
+- [Exception Handling](/exception-handling) - Handle errors
 
 ---
 

@@ -726,9 +726,8 @@ describe("UsersService", () => {
 
 ## Next Steps
 
-- [Controllers](https://claude.ai/chat/controllers.md) - Handle exceptions in routes
-- [Guards](https://claude.ai/chat/guards.md) - Throw exceptions in guards
-- [Validation](https://claude.ai/chat/validation.md) - Validation error handling
+- [Controllers](/controllers) - Handle exceptions in routes
+- [Validation](/pipes) - Validations
 
 ---
 

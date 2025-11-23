@@ -512,9 +512,8 @@ findAll(@Query(new ZodValidationPipe(PaginationSchema)) query: any) {
 
 ## Next Steps
 
-- [Guards](https://claude.ai/chat/guards.md) - Protect routes with authentication
-- [Exception Handling](https://claude.ai/chat/exceptions.md) - Handle validation errors gracefully
-- [Controllers](https://claude.ai/chat/controllers.md) - Learn more about route handlers
+- [Exception Handling](/exception-handling) - Handle validation errors gracefully
+- [Controllers](/controllers) - Learn more about route handlers
 
 ---
 
