@@ -1,64 +1,71 @@
 /**
  * KARIN JS - THEME OVERRIDES
- * Paleta: Black / Teal / Sky / Blue
+ * Sincronizado con la Landing Page (Angular)
  */
 
 :root {
-    /* --- GRADIENTES (Teal -> Sky -> Blue) --- */
-    --karin-gradient: linear-gradient(
+    /* 1. Paleta Base (Negro Profundo) */
+    --color-karin-bg: #050505;
+    --color-karin-card: #0a0a0a;
+    --color-karin-border: #1f1f1f;
+
+    /* 2. Colores de Marca (Cyan/Teal) */
+    --color-karin-cyan: oklch(77.7% 0.152 181.912);
+    --color-karin-teal: oklch(78.9% 0.154 211.53);
+    --color-karin-teal-dark: oklch(60.9% 0.126 221.723);
+
+    /* 3. Gradientes */
+    --image-karin-gradient: linear-gradient(
         135deg,
-        #14b8a6 0%,
-        #0ea5e9 50%,
-        #3b82f6 100%
+        var(--color-karin-cyan) 1%,
+        var(--color-karin-teal-dark) 100%
     );
 
-    /* --- BRAND COLORS (Modo Claro) --- */
-    --vp-c-brand-1: #0d9488; /* Teal 600 */
-    --vp-c-brand-2: #0f766e; /* Teal 700 */
-    --vp-c-brand-3: #115e59; /* Teal 800 */
-    --vp-c-brand-soft: rgba(14, 165, 233, 0.14); /* Sky soft */
+    /* --- PUENTE VITEPRESS (Overrides) --- */
+
+    /* Brand Colors (Modo Claro - VitePress usa esto para links) */
+    --vp-c-brand-1: var(--color-karin-teal);
+    --vp-c-brand-2: var(--color-karin-teal-dark);
+    --vp-c-brand-3: #115e59;
+    --vp-c-brand-soft: rgba(20, 184, 166, 0.14);
 }
 
 /* --- MODO OSCURO (Pitch Black) --- */
 .dark {
     /* Fondo: Negro Absoluto */
-    --vp-c-bg: #000000;
-    --vp-c-bg-alt: #050505; /* Para contrastar sidebar/bloques */
-    --vp-c-bg-soft: #0a0a0a;
+    --vp-c-bg: var(--color-karin-bg);
+    --vp-c-bg-alt: var(--color-karin-card); /* Para sidebar y bloques */
+    --vp-c-bg-soft: var(--color-karin-card);
 
-    /* Brand Colors (Neon) */
-    --vp-c-brand-1: #2dd4bf; /* Teal 400 */
-    --vp-c-brand-2: #38bdf8; /* Sky 400 */
-    --vp-c-brand-3: #60a5fa; /* Blue 400 */
+    /* Brand Colors (Neon en Dark Mode) */
+    --vp-c-brand-1: var(
+        --color-karin-cyan
+    ); /* Usamos Cyan como primario en dark para contraste */
+    --vp-c-brand-2: var(--color-karin-teal);
 
-    /* Gradiente Texto */
-    --karin-gradient-text: linear-gradient(135deg, #2dd4bf 0%, #38bdf8 100%);
+    /* Gradiente Texto (Usando tu variable) */
+    --karin-gradient-text: var(--image-karin-gradient);
 
     /* Bordes casi invisibles */
-    --vp-c-border: #1a1a1a;
-    --vp-c-divider: #1a1a1a;
+    --vp-c-border: var(--color-karin-border);
+    --vp-c-divider: var(--color-karin-border);
 }
 
 /**
  * --- SIDEBAR DERECHO (GRAFO NESTJS STYLE) ---
- * Aquí arreglamos el artefacto "º"
  */
 
-/* 1. Limpieza agresiva de listas para borrar el artefacto */
+/* 1. Limpieza agresiva de listas */
 .VPDocOutline ul,
 .VPDocOutline li {
     list-style: none !important;
     margin: 0 !important;
     padding: 0 !important;
 }
-
-/* Esto borra el caracter fantasma º */
 .VPDocOutline li::marker {
     content: none !important;
     display: none !important;
 }
-
-/* Ocultar la línea verde por defecto de VitePress */
 .VPDocOutline .outline-marker {
     display: none !important;
 }
@@ -66,7 +73,7 @@
 /* 2. El "Cable" (Línea Vertical Gris) */
 .VPDocOutline .content {
     position: relative;
-    border-left: 2px solid #262626 !important; /* Gris muy oscuro */
+    border-left: 2px solid #262626 !important;
     padding-left: 0 !important;
 }
 
@@ -74,26 +81,26 @@
 .VPDocOutlineItem a {
     position: relative;
     display: block;
-    padding-left: 20px !important; /* Espacio para la bolita */
+    padding-left: 20px !important;
     font-size: 13px;
     font-weight: 500;
-    color: #737373; /* Neutral 500 */
+    color: #737373;
     text-decoration: none;
     transition: color 0.2s;
-    line-height: 28px; /* Altura de línea cómoda */
+    line-height: 28px;
 }
 
 /* 4. EL NODO (Bolita Inactiva) */
 .VPDocOutlineItem a::before {
     content: "";
     position: absolute;
-    top: 10px; /* Centrado visualmente */
-    left: -5px; /* Alineación exacta sobre la línea (-5px = -1px línea + -4px mitad bolita) */
+    top: 10px;
+    left: -5px;
     width: 8px;
     height: 8px;
     border-radius: 50%;
-    background-color: var(--vp-c-bg); /* Centro negro (hueco) */
-    border: 2px solid #404040; /* Borde gris */
+    background-color: var(--vp-c-bg);
+    border: 2px solid #404040;
     z-index: 10;
     transition: all 0.3s ease;
 }
@@ -106,16 +113,16 @@
     -webkit-background-clip: text;
     background-clip: text;
     -webkit-text-fill-color: transparent;
-    color: transparent; /* Fallback */
+    color: transparent;
     font-weight: 700;
     opacity: 1;
 }
 
 /* Nodo Iluminado */
 .VPDocOutlineItem.active > a::before {
-    background-color: var(--vp-c-brand-1); /* Relleno Teal */
-    border-color: var(--vp-c-brand-1);
-    box-shadow: 0 0 10px var(--vp-c-brand-1); /* Glow */
+    background-color: var(--color-karin-cyan);
+    border-color: var(--color-karin-cyan);
+    box-shadow: 0 0 10px var(--color-karin-cyan); /* Glow Cyan */
     transform: scale(1.2);
 }
 
@@ -133,14 +140,18 @@
 
 /* Botones Brand con Gradiente */
 .VPButton.brand {
-    background-image: var(--karin-gradient);
+    background-image: var(--image-karin-gradient);
     border: none;
     color: white;
     font-weight: 600;
+    /* Efecto de sombra del botón de Angular */
+    box-shadow: 0 0 20px rgba(20, 184, 166, 0.3);
+    transition: all 0.3s;
 }
 .VPButton.brand:hover {
     filter: brightness(1.1);
-    box-shadow: 0 0 20px rgba(56, 189, 248, 0.3); /* Sky glow */
+    box-shadow: 0 0 30px rgba(20, 184, 166, 0.5);
+    transform: translateY(-2px);
 }
 
 /* Search Bar estilo bloque sólido */
@@ -151,7 +162,7 @@
 /* Scrollbar Dark */
 ::-webkit-scrollbar {
     width: 6px;
-    background: #000;
+    background: var(--color-karin-bg);
 }
 ::-webkit-scrollbar-thumb {
     background: #333;
