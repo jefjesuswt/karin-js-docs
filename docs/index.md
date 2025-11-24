@@ -1,11 +1,10 @@
 ---
-# https://vitepress.dev/reference/default-theme-home-page
 layout: home
 
 hero:
   name: "KarinJS"
-  text: "The Enterprise Framework for Bun"
-  tagline: Built for speed. Designed for sanity.
+  text: "The Bun-Native Architecture Framework"
+  tagline: Built for speed. Structured for real apps.
   actions:
     - theme: brand
       text: Get Started
@@ -16,11 +15,14 @@ hero:
 
 features:
   - title: ⚡ Built for Bun
-    details: Native support for Bun's runtime. No hacks, just raw performance and fast startup times.
+    details: Native support for Bun’s runtime — instant startup, minimal overhead, and maximum performance.
+
   - title: 🗂️ Module-less Architecture
-    details: Organize by features, not by technical modules. Automatic scanning for controllers and providers.
+    details: Organize your code by features instead of technical modules. Automatic scanning keeps your project clean.
+
   - title: 💉 Dependency Injection
-    details: Robust DI container powered by tsyringe. Familiar @injectable and @singleton patterns.
+    details: A modern DI container powered by tsyringe. Simple, familiar patterns like @injectable and @singleton.
+
   - title: 🛡️ Type Safety
-    details: Built with TypeScript from the ground up. Zod integration for runtime validation.
+    details: TypeScript first. Zod-based validation ensures runtime safety and predictable data flow.
 ---

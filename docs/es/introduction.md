@@ -20,7 +20,7 @@ KarinJS nació del deseo de simplificar el desarrollo backend sin sacrificar pod
 KarinJS elimina abstracciones innecesarias. Escribes controladores y servicios—el framework se encarga del resto.
 
 **2. Velocidad**  
-Aprovechando el rendimiento de Bun, KarinJS logra >10x más rápido en el manejo de solicitudes comparado con frameworks tradicionales de Node.js.
+Aprovechando el rendimiento de Bun, KarinJS logra >10x más velocidad en el manejo de solicitudes comparado con frameworks tradicionales de Node.js.
 
 **3. Familiaridad**  
 Si conoces decoradores de NestJS o Angular, ya conoces KarinJS. La curva de aprendizaje es mínima.
@@ -39,7 +39,7 @@ KarinJS es ideal para:
 
 ### Lo que KarinJS NO es
 
-KarinJS no intenta reemplazar a NestJS. Es una alternativa más ligera y con más opiniones para equipos que quieren:
+KarinJS no intenta reemplazar a NestJS. Es una alternativa más ligera para equipos que quieren:
 
 - Menos ceremonia, más código
 - Ciclos de desarrollo más rápidos
@@ -55,21 +55,21 @@ KarinJS sigue una arquitectura sencilla:
 ```
 ┌─────────────────────────────────────┐
 │         Controladores               │  ← Tus endpoints API
-│  (@Controller, @Get, @Post, etc.)  │
-└──────────────┬──────────────────────┘
-               │
-┌──────────────▼──────────────────────┐
-│          Servicios                  │  ← Lógica de negocio
-│      (@injectable, DI vía tsyringe) │
-└──────────────┬──────────────────────┘
-               │
-┌──────────────▼──────────────────────┐
-│      Adaptadores de Plataforma     │  ← H3 o Hono
-│    (Implementación IHttpAdapter)   │
-└──────────────┬──────────────────────┘
-               │
-┌──────────────▼──────────────────────┐
-│        Runtime Bun                  │  ← Servidor HTTP nativo
+│   (@Controller, @Get, @Post, etc.)  │
+└──────────────────┬──────────────────┘
+                   │
+┌──────────────────▼──────────────────┐
+│             Servicios               │  ← Lógica de negocio
+│    (@injectable, DI vía tsyringe)   │
+└──────────────────┬──────────────────┘
+                   │
+┌──────────────────▼──────────────────┐
+│      Adaptadores de Plataforma      │  ← H3 o Hono
+│    (Implementación IHttpAdapter)    │
+└──────────────────┬──────────────────┘
+                   │
+┌──────────────────▼──────────────────┐
+│             Runtime Bun             │  ← Servidor HTTP nativo
 └─────────────────────────────────────┘
 ```
 
@@ -138,7 +138,7 @@ Esto proporcionará:
 - Acceso a modelos con alcance (ej., modelos Mongoose solo visibles dentro de una característica)
 - Ruta de migración opcional para usuarios de NestJS
 
-Sin embargo, **las características permanecen opcionales**—puedes continuar usando la arquitectura plana y sin módulos si lo prefieres.
+Sin embargo, **las Feature() permanecerán opcionales**—puedes continuar usando la arquitectura plana y sin módulos si lo prefieres.
 
 ---
 

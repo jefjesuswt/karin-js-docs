@@ -1,15 +1,15 @@
 import { defineConfig } from "vitepress";
 
-// https://vitepress.dev/reference/site-config
 export default defineConfig({
-  // Configuración Global (Compartida)
+  // ---------------------------------------------------------------
+  // GLOBAL CONFIG
+  // ---------------------------------------------------------------
   title: "KarinJS",
   description:
-    "The enterprise-friendly, module-less backend framework built for Bun.",
+    "A Bun-native, module-less architecture framework built for speed, clarity, and developer velocity.",
   head: [["link", { rel: "icon", href: "/karin.png" }]],
   cleanUrls: true,
 
-  // Configuración compartida del tema (Logo, buscador, social)
   themeConfig: {
     logo: "/karin.png",
     socialLinks: [
@@ -21,13 +21,16 @@ export default defineConfig({
   },
 
   // ---------------------------------------------------------------
-  // CONFIGURACIÓN DE IDIOMAS (Locales)
+  // LOCALES
   // ---------------------------------------------------------------
   locales: {
-    // 1. Configuración para Inglés (Raíz)
+    // =============================================================
+    // ENGLISH (ROOT)
+    // =============================================================
     root: {
       label: "English",
       lang: "en",
+
       themeConfig: {
         nav: [
           { text: "Home", link: "/" },
@@ -37,6 +40,7 @@ export default defineConfig({
             link: "https://github.com/jefjesuswt/karin-js/blob/main/packages/core/CHANGELOG.md",
           },
         ],
+
         sidebar: [
           {
             text: "Introduction",
@@ -57,23 +61,25 @@ export default defineConfig({
           {
             text: "Advanced",
             collapsed: true,
-            items: [
-              { text: "Guards (WIP)", link: "#" }, // En inglés sigue WIP
-            ],
+            items: [{ text: "Guards (WIP)", link: "#" }],
           },
         ],
+
         footer: {
           message: "Released under the MIT License.",
-          copyright: "Copyright © 2025 Jeffrey Jimenez",
+          copyright: "© 2025 Jeffrey Jimenez",
         },
       },
     },
 
-    // 2. Configuración para Español (/es/)
+    // =============================================================
+    // SPANISH
+    // =============================================================
     es: {
       label: "Español",
       lang: "es",
       link: "/es/",
+
       themeConfig: {
         nav: [
           { text: "Inicio", link: "/es/" },
@@ -83,6 +89,7 @@ export default defineConfig({
             link: "https://github.com/jefjesuswt/karin-js/blob/main/packages/core/CHANGELOG.md",
           },
         ],
+
         sidebar: [
           {
             text: "Introducción",
@@ -103,16 +110,16 @@ export default defineConfig({
           {
             text: "Avanzado",
             collapsed: true,
-            items: [
-              { text: "Guards", link: "/es/guards" }, // Aquí sí enlazamos el archivo traducido
-            ],
+            items: [{ text: "Guards", link: "/es/guards" }],
           },
         ],
+
         footer: {
           message: "Lanzado bajo la licencia MIT.",
-          copyright: "Copyright © 2025 Jeffrey Jimenez",
+          copyright: "© 2025 Jeffrey Jimenez",
         },
-        // Traducción de etiquetas de la interfaz
+
+        // UI Labels
         docFooter: {
           prev: "Página anterior",
           next: "Página siguiente",

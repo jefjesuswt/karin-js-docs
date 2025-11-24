@@ -1,12 +1,10 @@
 ---
-# https://vitepress.dev/reference/default-theme-home-page
 layout: home
 
 hero:
   name: "KarinJS"
-  text: "El Framework Empresarial para Bun"
-  # "Sanity" se traduce mejor como algo lógico, intuitivo o sensato (en el sentido de 'common sense')
-  tagline: Velocidad pura. Diseño pragmático.
+  text: "El Framework de Arquitectura Nativo para Bun"
+  tagline: Velocidad pura. Arquitectura clara.
   actions:
     - theme: brand
       text: Primeros Pasos
@@ -17,14 +15,14 @@ hero:
 
 features:
   - title: ⚡ Nativo para Bun
-    details: Soporte nativo para el runtime de Bun. Sin parches (hacks), solo rendimiento crudo y arranques instantáneos.
+    details: Soporte nativo para el runtime de Bun. Inicio inmediato, mínima sobrecarga y máximo rendimiento.
 
-  - title: 🗂️ Arquitectura Module-less
-    details: Organiza por funcionalidades, no por módulos técnicos complejos. Escaneo automático de controladores y servicios.
+  - title: 🗂️ Arquitectura sin Módulos
+    details: Organiza por funcionalidades. El escaneo automático de controladores y servicios mantiene tu código limpio y escalable.
 
   - title: 💉 Inyección de Dependencias
-    details: Contenedor de DI robusto impulsado por tsyringe. Patrones familiares como @injectable y @singleton.
+    details: Contenedor DI moderno impulsado por tsyringe. Patrones familiares como @injectable y @singleton.
 
-  - title: 🛡️ Tipado Estricto
-    details: Escrito en TypeScript desde su base. Integración con Zod para validación estricta en tiempo de ejecución.
+  - title: 🛡️ Tipado Seguro
+    details: TypeScript de principio a fin. Validación estricta en tiempo de ejecución usando Zod.
 ---
