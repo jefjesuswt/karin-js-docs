@@ -7,7 +7,7 @@ export default defineConfig({
   title: "KarinJS",
   description:
     "A Bun-native, module-less architecture framework built for speed, clarity, and developer velocity.",
-  head: [["link", { rel: "icon", href: "/karin.png" }]],
+  head: [["link", { rel: "icon", href: "/karin.svg" }]],
   cleanUrls: true,
 
   themeConfig: {
